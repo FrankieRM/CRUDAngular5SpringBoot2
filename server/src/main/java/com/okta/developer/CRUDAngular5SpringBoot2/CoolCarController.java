@@ -2,6 +2,7 @@ package com.okta.developer.CRUDAngular5SpringBoot2;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.Collection;
 import java.util.stream.Collectors;
 
@@ -22,9 +23,6 @@ class CoolCarController {
     }
 
     private boolean isCool(Car car) {
-        return !car.getName().equals("AMC Gremlin") &&
-                !car.getName().equals("Triumph Stag") &&
-                !car.getName().equals("Ford Pinto") &&
-                !car.getName().equals("Yugo GV");
+        return car.getName().matches("^((?!AMC Gremlin|Triumph Stag|Ford Pinto|Yugo GV).)*$");
     }
 }
