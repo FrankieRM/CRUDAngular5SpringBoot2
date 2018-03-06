@@ -4,6 +4,8 @@ import {CarService} from './shared/car/car.service';
 import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {CarListComponent} from "./car-list/car-list.component";
+import {MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -11,6 +13,12 @@ import {CarListComponent} from "./car-list/car-list.component";
     CarListComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatListModule,
+    MatToolbarModule,
     BrowserModule,
     HttpClientModule
   ],
