@@ -4,9 +4,11 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 import java.util.stream.Stream;
 
+@EnableResourceServer
 @SpringBootApplication
 public class CrudAngular5SpringBoot2Application {
 
