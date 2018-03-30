@@ -12,12 +12,17 @@ import {CarEditComponent} from './car-edit/car-edit.component';
 import {FormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 import {OktaAuthModule, OktaCallbackComponent} from '@okta/okta-angular';
+import {HomeComponent} from './home/home.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/car-list',
+    redirectTo: '/home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'car-list',
@@ -47,7 +52,8 @@ const config = {
   declarations: [
     AppComponent,
     CarListComponent,
-    CarEditComponent
+    CarEditComponent,
+    HomeComponent
   ],
   imports: [
     BrowserAnimationsModule,
